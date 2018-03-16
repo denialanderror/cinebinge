@@ -1,14 +1,14 @@
-import list, { transform } from './list'
-import { data } from './sample-data'
+import { transform, forLocation } from './list'
+import { cinemasInBrum } from './sample-data'
 
 describe('transforms raw cinema data', () => {
   test('only shows Cineworlds', () => {
-    const cineworlds = transform(data)
+    const cineworlds = transform(cinemasInBrum)
     expect(cineworlds).toHaveLength(3)
   })
 
   test('only includes name and id', () => {
-    const transformed = transform(data)
+    const transformed = transform(cinemasInBrum)
     expect(Object.keys(transformed[0])).toEqual(['id', 'name'])
   })
 })
@@ -21,6 +21,6 @@ describe('fetches cinemas in Brum', () => {
       expect(response.length).toBeGreaterThan(0)
     }
 
-    await list.forLocation(event, context, callback)
+    await forLocation(event, context, callback)
   })
 })
