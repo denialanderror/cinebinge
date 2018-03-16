@@ -2,21 +2,7 @@
   "name": "cinebinge",
   "version": "1.0.0",
   "description": "Find the best combination of movies to watch back-to-back at your local cinema with the shortest downtime",
-  "main": "handler.js",
-  "dependencies": {
-    "got": "^8.3.0"
-  },
-  "devDependencies": {
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "prettier": "1.11.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/denialanderror/cinebinge.git"
@@ -26,5 +12,29 @@
   "bugs": {
     "url": "https://github.com/denialanderror/cinebinge/issues"
   },
-  "homepage": "https://github.com/denialanderror/cinebinge#readme"
+  "homepage": "https://github.com/denialanderror/cinebinge#readme",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build dev": "webpack --mode development",
+    "test": "jest"
+  },
+  "dependencies": {
+    "got": "^8.3.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "jest": "16.0.2",
+    "jest-cli": "^23.0.0-alpha.0",
+    "prettier": "1.11.1",
+    "serverless-webpack": "^5.1.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  }
 }
