@@ -2,8 +2,11 @@ service: serverless-cinebinge
 
 plugins:
   - serverless-webpack
+  - serverless-offline
 
-mode: development
+custom:
+  webpack:
+    includeModules: true
 
 provider:
   name: aws
@@ -12,7 +15,7 @@ provider:
 
 functions:
   forLocation:
-    handler: lambda/list.forLocation
+    handler: lambda/handler.forLocation
     events:
       - http:
           method: get

@@ -12,4 +12,4 @@ export const transform = ({ cinemas }) =>
     .filter(c => c.name.toLowerCase().includes('cineworld'))
     .map(c => ({ id: c.id, name: c.name }))
 
-export default { forLocation }
+export default forLocation
