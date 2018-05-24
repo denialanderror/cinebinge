@@ -1,8 +1,9 @@
 import got from 'got'
+import api from '../api'
 
 // rename to search
 export const forLocation = ({ location }, context, callback) =>
-  got(`https://api.cinelist.co.uk/search/cinemas/location/${location}`, {
+  got(api.fetchCinemas(location), {
     json: true
   })
     .then(response => callback(null, transform(response.body)))

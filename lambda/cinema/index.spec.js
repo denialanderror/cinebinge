@@ -1,5 +1,5 @@
-import { transform, forLocation } from './list'
-import { cinemasInBrum } from './sample-data'
+import { transform, forLocation } from './'
+import { cinemasInBrum } from '../sample-data'
 
 describe('transforms raw cinema data', () => {
   test('only shows Cineworlds', () => {
