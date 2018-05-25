@@ -2,7 +2,7 @@ import got from 'got'
 import api from '../api'
 
 // rename to search
-export const forLocation = ({ location }, context, callback) =>
+export const getCinemasByLocation = ({ location }, context, callback) =>
   got(api.fetchCinemas(location), {
     json: true
   })
@@ -14,4 +14,4 @@ export const transform = ({ cinemas }) =>
     .filter(cinema => cinema.name.toLowerCase().includes('cineworld'))
     .map(cinema => ({ id: cinema.id, name: cinema.name }))
 
-export default forLocation
+export default getCinemasByLocation

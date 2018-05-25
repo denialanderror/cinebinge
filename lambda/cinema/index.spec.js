@@ -1,4 +1,4 @@
-import { transform, forLocation } from './'
+import { transform, getCinemasByLocation } from './'
 import { cinemasInBrum } from '../sample-data'
 
 describe('transforms raw cinema data', () => {
@@ -21,6 +21,6 @@ describe('fetches cinemas in Brum', () => {
       expect(response.length).toBeGreaterThan(0)
     }
 
-    await forLocation(event, context, callback)
+    await getCinemasByLocation(event, context, callback)
   })
 })
